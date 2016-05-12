@@ -1,7 +1,9 @@
 /*Header Setup*/
-
+html {
+    height: 100%;
+}
 #header{
-    height:200px;
+    height:100%;
     background-image: url(../img/Header-LGYC2.png);
     background-repeat:no-repeat;
     background-position: center;
@@ -10,12 +12,18 @@
 
 /*End Header Setup*/
 .content{
-    margin-top: 50px;
     height: 100%;
+    width: 100%;
+    position: absolute;
 }
+
 
 body
 {
+    height: 100%;
+
+    width:100%;
+
     background-image:url(../img/background-SR.jpg);
 
     background-repeat:no-repeat;
@@ -27,8 +35,6 @@ body
     background-color: #313131;
 
     margin:10px auto;
-
-    width:960px;
 
     color: #000;
 }
@@ -165,13 +171,13 @@ p{
 /* Champion and Champion Details Setup*/
 .section-wrapper{
     width:100%;
-    height: auto;
+    height: 100%;
 }
 .section-wrapper-top{
     width:100%;
     height:263px;
     background: transparent
-                url(../img/MarcoSuperiorContenido.png)
+                url(../img/Top-wrapper.png)
                 no-repeat
                 50%;
     left:0;
@@ -180,21 +186,21 @@ p{
 
 }
 
-.section-wrapper-top :h1{
-    left:10px;
-}
 
 .section-wrapper-content{
-    padding-left: 95px;
-    width: 90%;
-    height: auto;
+    padding-left: 74px;
+    height: 100vh;
     position: relative;
-    top:155px;
+    top:263px;
+    left:164px;
+    width:65%;
+    background: url(../img/content-background.png) 14px;
+    background-repeat: repeat-y;
 }
 
 .imgChampIcon{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 
 }
 
@@ -202,19 +208,25 @@ p{
     float:left;
     margin: 5px;
     top: -15px;
+    width: 80px;
+    height: 80px;
 }
 
 .after{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background: url(../img/MarcoCampeones.png);
+    background-size: 80px 80px;
     position: absolute;
     z-index: 1;
     cursor:pointer;
 }
 
 .after:hover{
+    width:80px;
+    height: 80px;
     background: url(../img/MarcoCampeones-hover.png);
+    background-size: 80px 80px;
     position: absolute;
 }
 

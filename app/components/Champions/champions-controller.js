@@ -16,6 +16,8 @@ function championsController($location, championsFactory ){
         }
     });
 
+    ctrl.numberChamps = ctrl.champions.length;
+
     ctrl.detailChampData = {};
     ctrl.getChampionDetails = function (id) {
 
