@@ -1,0 +1,257 @@
+/*Header Setup*/
+
+#header{
+    height:200px;
+    background-image: url(../img/Header-LGYC2.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    width:100%;
+}
+
+/*End Header Setup*/
+.content{
+    margin-top: 50px;
+    height: 100%;
+}
+
+body
+{
+    background-image:url(../img/background-SR.jpg);
+
+    background-repeat:no-repeat;
+
+    background-size:cover;
+
+    background-attachment: fixed;
+
+    background-color: #313131;
+
+    margin:10px auto;
+
+    width:960px;
+
+    color: #000;
+}
+
+p{
+    color: #000;
+}
+
+
+/* Menu setup start*/
+
+.menuHeader{
+    color: #292929;!important;
+    font-size: 20px; !important;
+    font-style: italic; !important;
+    background-color: #d6751e; !important;
+    pointer-events: none; !important;
+    cursor: default; !important;
+}
+
+
+
+#nav {
+    z-index: 9002;
+    position:fixed;
+}
+
+#nav ul li #menu{
+    background-image: url(../img/nav-menu.png);
+   -moz-background-image: url(../img/nav-menu.png);
+    background-repeat: no-repeat;
+    padding: 0;
+    width:261px;
+    height: 38px;
+    left:10px;
+    position: absolute;
+    opacity:0.8;
+
+}
+
+#nav ul li:hover #menu{
+    background-image: url(../img/nav-menu-hover.png);
+    -moz-background-image: url(../img/nav-menu-hover.png);
+    background-repeat: no-repeat;
+    padding: 0;
+    width:261px;
+    height: 38px;!important;
+    left:10px;
+    position: absolute;
+    opacity:0.8;
+
+}
+
+
+#nav ul {
+    font-family: Amaranth ;
+    font-size: 18px;
+    font-style: italic;
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+
+}
+#nav ul li {
+    display: inline-block;
+
+
+}
+#nav ul li:hover {
+    background-image: url(../img/nav-menu-bg.png);
+
+
+
+}
+#nav ul li a {
+    color: #d6751e;
+    display: block;
+    height: 28px;!important;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+#nav ul li a.menuHeader{
+    color: #292929 ;
+    padding-bottom: 10px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+#nav ul li:hover ul {
+    display: block;
+    opacity:0.8;
+}
+
+#nav ul ul {
+    display: none;
+    position: absolute;
+    background-image: url(../img/nav-menu-bg.png);
+    border-top: 0;
+    margin-left: 10px;/*baja y acomoda el menu despues de la imagen*/
+    margin-top: 38px;!important;
+}
+
+#nav ul ul li {
+    display: block;
+    width: 261px;
+
+}
+#nav ul ul li a:hover {
+    color: #dddddd;
+    text-decoration: #5f5e5e;
+    background-image: url(../img/nav-menu-header-bg.png);
+
+}
+#second{
+    left:261px;
+}
+#third{
+    left:522px;
+}
+#fourth{
+    left:783px;
+}
+
+/*Menu setup end*/
+
+/* Champion and Champion Details Setup*/
+.section-wrapper{
+    width:100%;
+    height: auto;
+}
+.section-wrapper-top{
+    width:100%;
+    height:263px;
+    background: transparent
+                url(../img/MarcoSuperiorContenido.png)
+                no-repeat
+                50%;
+    left:0;
+    z-index: -2;
+    position: absolute;
+
+}
+
+.section-wrapper-top :h1{
+    left:10px;
+}
+
+.section-wrapper-content{
+    padding-left: 95px;
+    width: 90%;
+    height: auto;
+    position: relative;
+    top:155px;
+}
+
+.imgChampIcon{
+    width: 100px;
+    height: 100px;
+
+}
+
+.champBorder{
+    float:left;
+    margin: 5px;
+    top: -15px;
+}
+
+.after{
+    width: 100px;
+    height: 100px;
+    background: url(../img/MarcoCampeones.png);
+    position: absolute;
+    z-index: 1;
+    cursor:pointer;
+}
+
+.after:hover{
+    background: url(../img/MarcoCampeones-hover.png);
+    position: absolute;
+}
+
+#champDetailsGeneral{
+    width:auto;
+    height: 570px;
+}
+
+#loadingChampImg{
+
+    width:30%;
+    height: 90%;
+    float: left;
+}
+
+#abilityInfo{
+    width: auto;
+    height: 64px;
+
+}
+.imgChamp{
+    margin: 20px;
+    width: auto;
+    height: inherit;
+}
+.abilityIcon{
+    float: left;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+.txtAbility{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+
+
+/* Champion and Champion Details Setup end*/

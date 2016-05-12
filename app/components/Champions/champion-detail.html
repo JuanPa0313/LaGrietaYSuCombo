@@ -1,0 +1,26 @@
+
+Nombre: {{::cc.detailChampData.name}}<br>
+
+Titulo: {{::cc.detailChampData.title}}<br>
+
+<div id="champDetailsGeneral">
+    <div id="loadingChampImg">
+        <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.name + '_0.jpg'}}">
+    </div>
+
+    <div id="abilityInfo">
+
+        <div class="abilityIcon">
+            <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.6.1/img/passive/{{::cc.detailChampData.passive.image.full}} ">
+        </div>
+        <div class="txtAbility">
+            <p>{{::cc.detailChampData.passive.name + " (Pasivo)"}} <br>
+                {{::cc.detailChampData.passive.description }}</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+

@@ -1,0 +1,19 @@
+{
+  "name": "LaGrieta",
+  "description": "Pagina La Grieta y su combo",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+    "JP"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
