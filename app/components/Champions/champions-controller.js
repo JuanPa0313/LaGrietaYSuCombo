@@ -7,6 +7,7 @@ angular.module("appLaGrieta")
 
 function championsController($timeout, $location, championsFactory ){
     var vm = this;
+    //todo Obtencion de Campeones del servidor
     vm.champions = [];
 
     championsFactory.get().success(function(data) {
@@ -16,8 +17,11 @@ function championsController($timeout, $location, championsFactory ){
         }
     });
 
+    //todo end
     vm.numberChamps = vm.champions.length;
 
+
+    //todo Obtencion de la informacion de campeones por id
     vm.detailChampData = {};
     vm.getChampionDetails = function (id) {
 
@@ -37,12 +41,7 @@ function championsController($timeout, $location, championsFactory ){
     };
 
     vm.loadChampionDetails();
-
-
-
-
-
-
+    //todo end
 }
 
 

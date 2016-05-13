@@ -178,13 +178,19 @@ p{
 
 
 .section-wrapper-content{
+    float: left;
     display: block;
     padding-left: 74px;
     min-height: 100%;
     position: relative;
     background: url(../img/content-background.png) 11px repeat-y;
+
 }
 
+.clear{
+    clear: left;
+    clear: both;
+}
 
 .section-wrapper-bottom{
     height: 200px;
@@ -193,6 +199,7 @@ p{
 
 
 .imgChampIcon{
+   
     width: 80px;
     height: 80px;
 
@@ -207,6 +214,7 @@ p{
 }
 
 .after{
+
     width: 80px;
     height: 80px;
     background: url(../img/MarcoCampeones.png);
