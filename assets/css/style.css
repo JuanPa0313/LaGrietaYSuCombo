@@ -1,9 +1,23 @@
 /*Header Setup*/
-html {
-    height: 100%;
+html, body
+{
+    min-height: 100%;
+    width:100%;
+    margin:0;
+    background-image:url(../img/background-SR.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-color: #313131;
+    margin:10px auto;
+    color: #000;
+}
+
+p{
+    color: #000;
 }
 #header{
-    height:100%;
+    height:260px;
     background-image: url(../img/Header-LGYC2.png);
     background-repeat:no-repeat;
     background-position: center;
@@ -13,35 +27,12 @@ html {
 /*End Header Setup*/
 .content{
     height: 100%;
-    width: 100%;
+    min-width: 100%;
     position: absolute;
 }
 
 
-body
-{
-    height: 100%;
 
-    width:100%;
-
-    background-image:url(../img/background-SR.jpg);
-
-    background-repeat:no-repeat;
-
-    background-size:cover;
-
-    background-attachment: fixed;
-
-    background-color: #313131;
-
-    margin:10px auto;
-
-    color: #000;
-}
-
-p{
-    color: #000;
-}
 
 
 /* Menu setup start*/
@@ -170,33 +161,36 @@ p{
 
 /* Champion and Champion Details Setup*/
 .section-wrapper{
-    width:100%;
+    width:960px;
     height: 100%;
+    margin: 0 auto;
 }
 .section-wrapper-top{
-    width:100%;
+    width:960px;
     height:263px;
     background: transparent
                 url(../img/Top-wrapper.png)
-                no-repeat
-                50%;
-    left:0;
+                no-repeat;
     z-index: -2;
-    position: absolute;
+    position: relative;
 
 }
 
 
 .section-wrapper-content{
+    display: block;
     padding-left: 74px;
-    height: 100vh;
+    min-height: 100%;
     position: relative;
-    top:263px;
-    left:164px;
-    width:65%;
-    background: url(../img/content-background.png) 14px;
-    background-repeat: repeat-y;
+    background: url(../img/content-background.png) 11px repeat-y;
 }
+
+
+.section-wrapper-bottom{
+    height: 200px;
+    position: relative;
+}
+
 
 .imgChampIcon{
     width: 80px;

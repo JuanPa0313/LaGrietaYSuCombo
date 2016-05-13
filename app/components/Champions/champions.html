@@ -1,11 +1,10 @@
 
 <div class="section-wrapper">
     <div class="section-wrapper-top">
-        <h1>Campeones</h1>
-        {{cc.champions.length}}
+
     </div>
-    <div class="section-wrapper-content">
-        <div ng-repeat="champ in cc.champions | orderBy:'name' | filter:champName | limitTo:9" class="champBorder">
+    <div id="ChampPortraits" class="section-wrapper-content">
+        <div ng-repeat="champ in cc.champions | orderBy:'name' | filter:champName " class="champBorder">
             <div class="after">
 
             </div>
@@ -14,5 +13,7 @@
         </div>
     </div>
 
-    <div class="section-wrapper-bottom"></div>
+    <div class="section-wrapper-bottom">
+        hello
+    </div>
 </div>

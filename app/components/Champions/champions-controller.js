@@ -5,38 +5,43 @@
 angular.module("appLaGrieta")
     .controller("ChampionsCtrl",championsController);
 
-function championsController($location, championsFactory ){
-    var ctrl = this;
-    ctrl.champions = [];
+function championsController($timeout, $location, championsFactory ){
+    var vm = this;
+    vm.champions = [];
 
     championsFactory.get().success(function(data) {
         var parsed = data.data;
         for(var champ in parsed){
-            ctrl.champions.push(parsed[champ]);
+            vm.champions.push(parsed[champ]);
         }
     });
 
-    ctrl.numberChamps = ctrl.champions.length;
+    vm.numberChamps = vm.champions.length;
 
-    ctrl.detailChampData = {};
-    ctrl.getChampionDetails = function (id) {
+    vm.detailChampData = {};
+    vm.getChampionDetails = function (id) {
 
         championsFactory.getChampDetails(id)
             // if successful creation, call our get function to get all the new todos
             .success(function (data) {
                 var parsed = data;
-                ctrl.detailChampData=parsed;
+                vm.detailChampData=parsed;
                 alert(parsed.info.difficulty);
                 localStorage.setItem('champDetail',JSON.stringify(parsed));
-                $location.path('/champion-detail/'+ctrl.detailChampData.name);
+                $location.path('/champion-detail/'+vm.detailChampData.name);
             });
     };
 
-    ctrl.loadChampionDetails = function(){
-      ctrl.detailChampData = JSON.parse(localStorage.getItem('champDetail'));
+    vm.loadChampionDetails = function(){
+      vm.detailChampData = JSON.parse(localStorage.getItem('champDetail'));
     };
 
-    ctrl.loadChampionDetails();
+    vm.loadChampionDetails();
+
+
+
+
+
 
 }
 
