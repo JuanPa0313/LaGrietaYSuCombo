@@ -5,7 +5,7 @@
 angular.module("appLaGrieta")
     .controller("ChampionsCtrl",championsController);
 
-function championsController($timeout, $location, championsFactory ){
+function championsController($sce, $location, championsFactory ){
     var vm = this;
     //todo Obtencion de Campeones del servidor
     vm.champions = [];
@@ -30,7 +30,6 @@ function championsController($timeout, $location, championsFactory ){
             .success(function (data) {
                 var parsed = data;
                 vm.detailChampData=parsed;
-                alert(parsed.info.difficulty);
                 localStorage.setItem('champDetail',JSON.stringify(parsed));
                 $location.path('/champion-detail/'+vm.detailChampData.name);
             });
@@ -42,6 +41,11 @@ function championsController($timeout, $location, championsFactory ){
 
     vm.loadChampionDetails();
     //todo end
+
+    //todo filtro de html
+    vm.trustHtml = function (value){
+        return $sce.trustAsHtml(value);
+    };
 }
 
 

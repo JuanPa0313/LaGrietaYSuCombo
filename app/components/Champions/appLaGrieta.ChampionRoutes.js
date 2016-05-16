@@ -1,7 +1,7 @@
 /**
  * Created by Juan Pa on 29/03/2016.
  */
-angular.module("appLaGrieta",['ui.bootstrap','ngRoute'])
+angular.module("appLaGrieta",['ngRoute'])
     .config(['$routeProvider', function($routeProvider){
         $routeProvider
             .when('/champions',{

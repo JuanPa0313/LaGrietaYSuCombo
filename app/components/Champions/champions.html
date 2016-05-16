@@ -29,11 +29,12 @@
         <div class="champ-wrapper" >
             <div ng-repeat="champ in cc.champions | orderBy:'name' | filter:champName" class="champBorder">
 
-                <div class="after">
+                <div class="after" ng-click="cc.getChampionDetails(champ.id)">
 
                 </div>
-                <img class="imgChampIcon" ng-click="cc.getChampionDetails(champ.id)" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/{{::champ.image.full}}"
+                <img class="imgChampIcon" ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/{{::champ.image.full}}"
                      alt="{{::champ.title}}">
+
             </div>
 
         </div>

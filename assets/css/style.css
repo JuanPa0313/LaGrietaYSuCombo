@@ -173,7 +173,7 @@ p{
 .section-wrapper-top{
     width:960px;
     height:125px;
-    background-position: 0px -5px;
+    background-position: 0px 0px;
     position: relative;
 
 }
@@ -189,7 +189,7 @@ p{
     width: 250px;
     height: 30px;
     /* margin : <top> <right> <bot> <left>*/
-    margin: 8px 0 0 655px;
+    margin: 12px 0 0 655px;
     background: rgba(140, 136, 136, 0.3);
 }
 
