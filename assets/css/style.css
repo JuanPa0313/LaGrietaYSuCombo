@@ -160,6 +160,11 @@ p{
 /*Menu setup end*/
 
 /* Champion and Champion Details Setup*/
+.section-wrapper-top, .section-wrapper-bottom{
+    background-image: url(../img/ContentBorder.png);
+    background-repeat: no-repeat;
+}
+
 .section-wrapper{
     width:960px;
     height: 100%;
@@ -167,25 +172,41 @@ p{
 }
 .section-wrapper-top{
     width:960px;
-    height:263px;
-    background: transparent
-                url(../img/Top-wrapper.png)
-                no-repeat;
-    z-index: -2;
+    height:125px;
+    background-position: 0px -5px;
     position: relative;
 
 }
 
+.section-wrapper-bottom{
+    width:960px;
+    height:125px;
+    background-position: 0px -130px;
+    position: relative;
+}
+
+.champ-Search-Bar{
+    width: 250px;
+    height: 30px;
+    /* margin : <top> <right> <bot> <left>*/
+    margin: 8px 0 0 655px;
+    background: rgba(140, 136, 136, 0.3);
+}
+
+.champ-wrapper{
+    width:860px;
+}
 
 .section-wrapper-content{
     float: left;
     display: block;
+    width:100%;
     padding-left: 74px;
-    min-height: 100%;
-    position: relative;
-    background: url(../img/content-background.png) 11px repeat-y;
+    background: url(../img/content-background.png)  repeat-y;
 
 }
+
+
 
 .clear{
     clear: left;
