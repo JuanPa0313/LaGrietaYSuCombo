@@ -1,18 +1,26 @@
 
-Nombre: {{::cc.detailChampData.name}}<br>
+<!--Nombre: {{::cc.detailChampData.name}}<br>-->
 
-Titulo: {{::cc.detailChampData.title}}<br>
+<!--Titulo: {{::cc.detailChampData.title}}<br>-->
 
 <div id="champDetailsGeneral">
-    <div id="loadingChampImg">
-        <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_0.jpg'}}">
-    </div>
+
+        <div  slider="{dots:true ,slidesToShow:1}" class="container-slider">
+            <div class="loading-champ-img" ng-repeat="skin in cc.detailChampData.skins">
+
+                <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_'+ skin.num +'.jpg'}}">
+
+            </div>
+
+        </div>
+
+
 
     <div id="abilityInfo">
 
         <div class="abilityIcon">
             <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/passive/{{::cc.detailChampData.passive.image.full}} ">
-            <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/{{::cc.detailChampData.spells[0].image.full}} ">
+            <!--<img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/{{::cc.detailChampData.spells[0].image.full}} ">-->
         </div>
         <div class="txtAbility">
             {{::cc.detailChampData.passive.name + " (Pasivo)"}} <br>

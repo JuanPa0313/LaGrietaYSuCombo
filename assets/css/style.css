@@ -17,7 +17,7 @@ p{
     color: #000;
 }
 #header{
-    height:260px;
+    height:200px;
     background-image: url(../img/Header-LGYC2.png);
     background-repeat:no-repeat;
     background-position: center;
@@ -254,15 +254,22 @@ p{
 }
 
 #champDetailsGeneral{
-    width:auto;
+    margin: 0 auto;
+    width:860px;
     height: 570px;
 }
 
-#loadingChampImg{
-
-    width:30%;
-    height: 90%;
+.container-slider{
+    width:250px;
     float: left;
+    top:-20px;
+}
+
+.loading-champ-img{
+
+    width:300px;
+    height: 400px;
+
 }
 
 #abilityInfo{
