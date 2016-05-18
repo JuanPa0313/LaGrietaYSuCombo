@@ -7,6 +7,6 @@ angular.module("appLaGrieta")
 function laGrietaMenu(){
     return {
         restrict:'EA',
-        templateUrl:'/LaGrieta/app/shared/Menu/nav-menu.html'
+        templateUrl:'./../../shared/Menu/nav-menu.html'
     };
 }

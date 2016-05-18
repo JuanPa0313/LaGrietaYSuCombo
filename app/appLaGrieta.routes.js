@@ -1,7 +1,7 @@
 /**
  * Created by jprod01 on 11/03/2016.
  */
-angular.module("appLaGrieta")
+angular.module("appLaGrieta",['ngRoute'])
     .config(function($routeProvider){
         $routeProvider
             .when('Champions/home',{

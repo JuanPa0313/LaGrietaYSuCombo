@@ -2,13 +2,35 @@
 <!--Nombre: {{::cc.detailChampData.name}}<br>-->
 
 <!--Titulo: {{::cc.detailChampData.title}}<br>-->
+<div class="section-wrapper">
+    <div class="section-wrapper-top">
+    </div>
+    <div class="section-wrapper-content">
+        <div  slider="{dots:true ,slidesToShow:1}" class="container-slider">
+            <div class="loading-champ-img" ng-repeat="skin in cc.detailChampData.skins">
+
+                <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_'+ skin.num +'.jpg'}}">
+                <div class="splash-border">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clear"></div>
+    <div class="section-wrapper-bottom">
+
+    </div>
+</div>
+
 
 <div id="champDetailsGeneral">
 
         <div  slider="{dots:true ,slidesToShow:1}" class="container-slider">
             <div class="loading-champ-img" ng-repeat="skin in cc.detailChampData.skins">
-
-                <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_'+ skin.num +'.jpg'}}">
+                <div class="splash-border">
+                    <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_'+ skin.num +'.jpg'}}">
+                </div>
 
             </div>
 
