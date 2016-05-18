@@ -195,13 +195,13 @@ p{
 
 .champ-wrapper{
     width:860px;
+    margin:0 74px;
 }
 
 .section-wrapper-content{
     float: left;
     display: block;
     width:100%;
-    padding-left: 74px;
     background: url(../img/content-background.png)  repeat-y;
 
 }
@@ -256,21 +256,34 @@ p{
     height: 570px;
 }
 
-.container-slider{
+.slider{
     width:250px;
     float: left;
-    top:-20px;
+    left:140px;
+    top:90px;
 }
 
-.splash-border{
-
+.slider-wrapper:after{
+    content:'';
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    left:70px;
+    background: url(../img/border-try.png)repeat-x;
+    background-size: 410px 560px;
 }
+
+.slider-wrapper{
+    width:480px;
+    height: 550px;
+    position: relative;
+}
+
+
 .loading-champ-img{
     z-index: -3;
-    width:300px;
-    height: 412px;
-
-
+    width:250px;
 }
 
 
@@ -280,14 +293,21 @@ p{
 }
 
 .imgChamp{
-    z-index: -5;
-    margin-left: 15px;
-    width: auto;
+    width: 294px;
     height: 400px;
-    border-image: url(../img/Border-SplashArt.png) 2px;
-
-
 }
+
+.splash-border:after{
+    content:'';
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    left:0;
+    background: url(../img/Border-SplashArt.png)repeat-x;
+    background-size: 250px 400px;
+}
+
 .abilityIcon{
     float: left;
     margin-right: 40px;
@@ -298,16 +318,5 @@ p{
     margin-top: 20px;
     margin-left: 20px;
 }
-
-.slick-prev{
-    left:-8px;
-}
-
-.slick-next{
-    right:-20px;
-}
-
-
-
 
 /* Champion and Champion Details Setup end*/

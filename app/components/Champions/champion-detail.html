@@ -6,15 +6,29 @@
     <div class="section-wrapper-top">
     </div>
     <div class="section-wrapper-content">
-        <div  slider="{dots:true ,slidesToShow:1}" class="container-slider">
-            <div class="loading-champ-img" ng-repeat="skin in cc.detailChampData.skins">
+        <div class="slider-wrapper">
+            <div  slider="{slidesToShow:1, draggable:false}" class="slider">
+                <div class="loading-champ-img" ng-repeat="skin in cc.detailChampData.skins">
+                    <div class="splash-border">
+                        <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_'+ skin.num +'.jpg'}}">
 
-                <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_'+ skin.num +'.jpg'}}">
-                <div class="splash-border">
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
+        <div id="abilityInfo">
+
+            <div class="abilityIcon">
+                <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/passive/{{::cc.detailChampData.passive.image.full}} ">
+                <!--<img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/{{::cc.detailChampData.spells[0].image.full}} ">-->
+            </div>
+            <div class="txtAbility">
+                {{::cc.detailChampData.passive.name + " (Pasivo)"}} <br>
+                <p ng-bind-html="cc.trustHtml(cc.detailChampData.spells[0].tooltip)"></p>
+            </div>
+        </div>
+
     </div>
 
     <div class="clear"></div>
@@ -26,29 +40,11 @@
 
 <div id="champDetailsGeneral">
 
-        <div  slider="{dots:true ,slidesToShow:1}" class="container-slider">
-            <div class="loading-champ-img" ng-repeat="skin in cc.detailChampData.skins">
-                <div class="splash-border">
-                    <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_'+ skin.num +'.jpg'}}">
-                </div>
-
-            </div>
-
-        </div>
 
 
 
-    <div id="abilityInfo">
 
-        <div class="abilityIcon">
-            <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/passive/{{::cc.detailChampData.passive.image.full}} ">
-            <!--<img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/{{::cc.detailChampData.spells[0].image.full}} ">-->
-        </div>
-        <div class="txtAbility">
-            {{::cc.detailChampData.passive.name + " (Pasivo)"}} <br>
-                <p ng-bind-html="cc.trustHtml(cc.detailChampData.spells[0].tooltip)"></p>
-        </div>
-    </div>
+
 
 </div>
 
