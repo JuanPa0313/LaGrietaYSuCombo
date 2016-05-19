@@ -203,10 +203,7 @@ p{
     display: block;
     width:100%;
     background: url(../img/content-background.png)  repeat-y;
-
 }
-
-
 
 .clear{
     clear: left;
@@ -250,6 +247,8 @@ p{
     position: absolute;
 }
 
+/*  Info General de campeones*/
+
 #champDetailsGeneral{
     margin: 0 auto;
     width:860px;
@@ -257,26 +256,27 @@ p{
 }
 
 .slider{
-    width:250px;
+    width:220px;
     float: left;
     left:140px;
-    top:90px;
+    top:10px;
 }
 
-.slider-wrapper:after{
-    content:'';
-    position: absolute;
-    top:0;
-    right: 0;
-    bottom:0;
-    left:70px;
-    background: url(../img/border-try.png)repeat-x;
-    background-size: 410px 560px;
-}
 
 .slider-wrapper{
-    width:480px;
+    width:477px;
     height: 550px;
+    position: relative;
+    border-right:solid 1px dimgray;
+
+}
+
+.skins-tittle{
+    width:300px;
+    height: 120px;
+    left:150px;
+    top:-30px;
+    background: url(../img/Aspectos.png) no-repeat;
     position: relative;
 }
 
@@ -293,8 +293,13 @@ p{
 }
 
 .imgChamp{
-    width: 294px;
+    width: 220px;
     height: 400px;
+
+}
+
+.splash-border{
+    box-shadow: #5f5e5e;
 }
 
 .splash-border:after{
@@ -304,8 +309,9 @@ p{
     right: 0;
     bottom:0;
     left:0;
-    background: url(../img/Border-SplashArt.png)repeat-x;
-    background-size: 250px 400px;
+    background: url(../img/Border-SplashArt.png) repeat-x;
+    background-size: 220px 400px;
+
 }
 
 .abilityIcon{
