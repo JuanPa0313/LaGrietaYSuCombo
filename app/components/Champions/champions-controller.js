@@ -5,8 +5,10 @@
 angular.module("appLaGrieta")
     .controller("ChampionsCtrl",championsController);
 
-function championsController($sce, $location, championsFactory ){
+function championsController($location, championsFactory ){
     var vm = this;
+
+
     //todo Obtencion de Campeones del servidor
     vm.champions = [];
 
@@ -43,9 +45,13 @@ function championsController($sce, $location, championsFactory ){
     //todo end
 
     //todo filtro de html
-    vm.trustHtml = function (value){
-        return $sce.trustAsHtml(value);
-    };
+
+
+
+
+
+
+
 }
 
 

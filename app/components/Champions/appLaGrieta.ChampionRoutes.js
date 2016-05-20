@@ -10,7 +10,7 @@ angular.module("appLaGrieta",['ngRoute'])
             })
             .when('/champion-detail/:name',{
                 templateUrl: 'champion-detail.html',
-                controller: 'ChampionsCtrl as cc'
+                controller: 'ChampionDetailCtrl as cc'
             })
             .otherwise({
                 redirectTo: '/champions'

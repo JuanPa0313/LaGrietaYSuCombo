@@ -15,10 +15,53 @@
                     <div class="splash-border">
                         <img class="imgChamp" ng-src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/{{::cc.detailChampData.key + '_'+ skin.num +'.jpg'}}">
                     </div>
-                    <div style="margin: auto; width: 50%;">
-                        <h4 style="margin: auto; color: ghostwhite;">{{skin.name}}</h4>
+                    <div >
+                        <h5 style="text-align: center; color: ghostwhite; ">{{cc.renameSkin(skin.name)}}</h5>
                     </div>
                 </div>
+            </div>
+
+        </div>
+        <div class="info-wrapper">
+
+            <div class="atts-wrapper">
+                <div class="atts-tittle">
+                </div>
+                <table class="atts-table">
+                    <tr>
+                        <th>Vida</th>
+                        <th>Mana</th>
+                        <th>Rango de Atq.</th>
+                        <th>Vel. de Mov.</th>
+                    </tr>
+                    <tr>
+                        <td>{{::cc.detailChampData.stats.hp + ' ('+cc.detailChampData.stats.hpperlevel+' x Nvl)'}}</td>
+                        <td>{{::cc.detailChampData.stats.mp + ' ('+cc.detailChampData.stats.mpperlevel+' x Nvl)'}}</td>
+                        <td>{{::cc.detailChampData.stats.attackrange}}</td>
+                        <td>{{::cc.detailChampData.stats.movespeed}}</td>
+                    </tr>
+
+                    <tr>
+                        <th>Daño de Atq.</th>
+                        <th>Vel. de Atq.</th>
+                        <th>Armadura</th>
+                        <th>Res. Mágica</th>
+                    </tr>
+                    <tr>
+                        <td>{{cc.detailChampData.stats.attackdamage + ' ('+cc.detailChampData.stats.attackdamageperlevel+' x Nvl)'}}</td>
+                        <td>{{cc.calculateAttackSpeed(cc.detailChampData.stats.attackspeedoffset, cc.detailChampData.stats.attackspeedperlevel)}}</td>
+                        <td>{{::cc.detailChampData.stats.armor + ' ('+cc.detailChampData.stats.armorperlevel+' x Nvl)'}}</td>
+                        <td>{{::cc.detailChampData.stats.spellblock + ' ('+cc.detailChampData.stats.spellblockperlevel+' x Nvl)'}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="stats-wrapper">
+                <div class="stats-tittle">
+                </div>
+                <div id="stats-graph" class="ct-chart ct-perfect-fourth">
+
+                </div>
+
             </div>
         </div>
         <div class="clear"></div>
