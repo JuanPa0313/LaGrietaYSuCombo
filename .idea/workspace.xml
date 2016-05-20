@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b59625e-a2b3-443e-982a-8c3886c7e583" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/Atributos.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/Estadisticas.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/Habilidades.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/Champions/champion-service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/Aspectos.png" afterPath="$PROJECT_DIR$/assets/img/Aspectos.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Champions/appLaGrieta.ChampionRoutes.js" afterPath="$PROJECT_DIR$/app/components/Champions/appLaGrieta.ChampionRoutes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Champions/champion-detail.html" afterPath="$PROJECT_DIR$/app/components/Champions/champion-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Champions/champions-controller.js" afterPath="$PROJECT_DIR$/app/components/Champions/champions-controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Champions/home.html" afterPath="$PROJECT_DIR$/app/components/Champions/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
     </list>
     <ignored path="LaGrieta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -456,7 +446,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463713358638</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Comienzo Detalles de Campeón">
+      <created>1463713383689</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1463713383689</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
