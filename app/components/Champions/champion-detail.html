@@ -58,24 +58,51 @@
             <div class="stats-wrapper">
                 <div class="stats-tittle">
                 </div>
-                <div id="stats-graph" class="ct-chart ct-perfect-fourth">
+                <div id="stats-graph" >
 
                 </div>
 
             </div>
         </div>
         <div class="clear"></div>
-        <div id="abilityInfo">
+        <div class="abilityInfo-wrapper">
+            <div class="ability-tittle">
+            </div>
+                <table class="ability-table">
+                    <tr>
+                        <th rowspan="2" class="abilityIcon" id="abilityIcon">
+                                <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.10.1/img/passive/{{::cc.detailChampData.passive.image.full}} ">
 
-            <div class="abilityIcon">
-                <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/passive/{{::cc.detailChampData.passive.image.full}} ">
-                <!--<img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.9.1/img/spell/{{::cc.detailChampData.spells[0].image.full}} ">-->
-            </div>
-            <div class="txtAbility">
-                {{::cc.detailChampData.passive.name + " (Pasivo)"}} <br>
-                <p ng-bind-html="cc.trustHtml(cc.detailChampData.spells[0].tooltip)"></p>
-            </div>
+                        </th>
+                        <th id="txtAbility-tittle"> {{::cc.detailChampData.passive.name + " (Pasivo)"}}</th>
+                    </tr>
+                    <tr style="border-bottom: solid 1px dimgray">
+                        <td>
+                            <div class="txtAbility">
+                                <p ng-bind-html="cc.trustHtml(cc.detailChampData.passive.description)"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table ng-repeat="spell in cc.detailChampData.spells" class="ability-table">
+                    <tr>
+                        <th rowspan="2" class="abilityIcon" id="abilityIconSpell">
+                            <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.10.1/img/spell/{{spell.image.full}} ">
+
+                        </th>
+                        <th id="txtAbility-tittleSpell"> {{cc.renameSpells(spell.name) }}</th>
+                    </tr>
+                    <tr style="border-bottom: solid 1px dimgray">
+                        <td>
+                            <div class="txtAbility">
+                                <p ng-bind-html="cc.trustHtml(spell.tooltip)"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
         </div>
+
 
     </div>
 

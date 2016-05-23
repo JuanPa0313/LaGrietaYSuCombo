@@ -5,8 +5,10 @@ angular.module("appLaGrieta")
     .controller("ChampionDetailCtrl",championDetailController);
 
 
-function championDetailController($sce, championsFactory) {
+function championDetailController($sce, championService) {
     var vm = this;
+    var Service = championService;
+    vm. renamedSpells = false;
     vm.detailChampData = JSON.parse(localStorage.getItem('champDetail'));
 
     vm.trustHtml = function (value){
@@ -26,27 +28,15 @@ function championDetailController($sce, championsFactory) {
         return skinName;
     }
 
-    vm.drawBars=function(){
-        var data = {
-            // A labels array that can contain any sort of values
-            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-            // Our series array that contains series objects or in this case series data arrays
-            series: [
-                [5, 2, 4, 2, 0]
-            ]
-        };
+    vm.drawBars=function(attack, defense, magic, difficulty){
 
-// Create a new line chart object where as first parameter we pass in a selector
-// that is resolving to our chart container element. The Second parameter
-// is the actual data object.
-        new Chartist.Line('.ct-chart', data);
-    };
-
-    vm.drawBars();
-
-    /*vm.drawBars=function(attack, defense, magic, difficulty){
-        google.charts.load('current', {packages: ['corechart', 'bar']});
-        google.charts.setOnLoadCallback(drawBasic);
+        if(Service.isGoogleLoaded == false){
+            google.charts.load('current', {packages: ['corechart', 'bar']});
+            google.charts.setOnLoadCallback(drawBasic);
+            Service.setGoogleLoaded(true);
+        }else{
+            google.charts.setOnLoadCallback(drawBasic);
+        }
 
         function drawBasic() {
 
@@ -94,7 +84,48 @@ function championDetailController($sce, championsFactory) {
 
     angular.element(document).ready(function(){
         vm.drawBars(vm.detailChampData.info.attack, vm.detailChampData.info.defense, vm.detailChampData.info.magic, vm.detailChampData.info.difficulty);
-    })*/
+    });
+
+    vm.renameSpells=function (data){
+        if(data != undefined )
+        {
+            /*if(Service.nameIndex < 4){*/
+                switch (Service.nameIndex){
+                    case 0:
+
+                            data += " (Q)";
+                            Service.setNameIndex(1);
+
+                        break;
+                    case 1:
+                        data += " (W)";
+                        Service.setNameIndex(2);
+                        break;
+                    case 2:
+                        data+= " (E)";
+                        Service.setNameIndex(3);
+                        break;
+                    case 3:
+                        data+= " (R)";
+                        Service.setNameIndex(0);
+                        break;
+                }
+            /*}*/
+
+
+            return data;
+        }
+
+    };
+
+    vm.replaceSpellValues=function(text, spell){
+        /*EffectBurn replacement*/
+
+
+        var newText = replace("")
+    };
+
+
 
 
 

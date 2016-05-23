@@ -5,11 +5,20 @@ angular.module("appLaGrieta")
     .factory('championService',championService);
 
 function championService(){
-    var detailChampData = {};
-
-    this.storeData = function (data){
-        detailChampData=data;
+    var Service ={
+        isGoogleLoaded: false,
+        getGoogleLoaded:function(){
+            return this.isGoogleLoaded;
+        },
+        setGoogleLoaded:function(googleLoad){
+            this.isGoogleLoaded=googleLoad;
+        },
+        nameIndex:0,
+        setNameIndex:function(num){
+            this.nameIndex=num;
+        }
     }
 
-    return detailChampData;
+    return Service;
+
 }

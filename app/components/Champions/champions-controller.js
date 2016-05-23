@@ -5,9 +5,9 @@
 angular.module("appLaGrieta")
     .controller("ChampionsCtrl",championsController);
 
-function championsController($location, championsFactory ){
+function championsController($location, championsFactory, championService){
     var vm = this;
-
+    var Service = championService;
 
     //todo Obtencion de Campeones del servidor
     vm.champions = [];

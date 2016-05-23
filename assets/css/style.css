@@ -278,6 +278,27 @@ p{
     top:43.5%;
 }
 
+.imgChamp{
+    width: 220px;
+    height: 400px;
+}
+
+.splash-border{
+    box-shadow: #5f5e5e;
+}
+
+.splash-border:after{
+    content:'';
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    left:0;
+    background: url(../img/Border-SplashArt.png) repeat-x;
+    background-size: 220px 400px;
+
+}
+
 .info-wrapper{
     width:477px;
     height: 550px;
@@ -314,6 +335,7 @@ p{
 #stats-graph{
     top: -60px;
     position: relative;
+
 }
 
 .atts-wrapper{
@@ -337,6 +359,45 @@ p{
     margin-top: 10px;
 }
 
+.ability-tittle{
+    width:100%;
+    height: 180px;
+    left:280px;
+    top:30px;
+    background: url(../img/Habilidades.png) no-repeat;
+    position: relative;
+}
+
+.abilityInfo-wrapper{
+    width:865px;
+    margin-left:45px;
+    border-top:solid 1px dimgray;
+}
+.ability-table{
+    width:860px;
+    position: relative;
+    border-collapse: collapse;
+    border-bottom:solid 1px dimgray;
+}
+
+.ability-table p{
+    color: ghostwhite;
+}
+
+.ability-table th{
+    text-align: left;
+    color: ghostwhite;
+}
+
+.ability-table tr{
+
+}
+
+.ability-table br{
+    display: block;
+    margin: 5px 0;
+}
+
 .spells-tittle{
     width:80%;
     height: 120px;
@@ -355,40 +416,38 @@ p{
 
 #abilityInfo{
     width: auto;
-    height: 64px;
-}
-
-.imgChamp{
-    width: 220px;
-    height: 400px;
-
-}
-
-.splash-border{
-    box-shadow: #5f5e5e;
-}
-
-.splash-border:after{
-    content:'';
-    position: absolute;
-    top:0;
-    right: 0;
-    bottom:0;
-    left:0;
-    background: url(../img/Border-SplashArt.png) repeat-x;
-    background-size: 220px 400px;
 
 }
 
 .abilityIcon{
-    float: left;
-    margin-right: 40px;
-    margin-left: 20px;
+    width: 13%;
+    border-right: solid 1px dimgray;
+
+    position: relative
+}
+
+#abilityIcon{
+    text-align: center;
+}
+#abilityIconSpell{
+    text-align: center;
 }
 
 .txtAbility{
-    margin-top: 20px;
-    margin-left: 20px;
+    text-align: left;
+    margin-left:10px;
+    padding-bottom: 15px;
+}
+
+#txtAbility-tittle{
+    left:10px;
+    position: relative;
+
+}
+#txtAbility-tittleSpell{
+    left:10px;
+    position: relative;
+    padding-top: 15px;
 }
 
 /* Champion and Champion Details Setup end*/
