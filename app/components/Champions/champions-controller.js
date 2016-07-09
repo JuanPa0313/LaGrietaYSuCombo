@@ -10,10 +10,12 @@ function championsController($location, championsFactory, championService){
     var Service = championService;
 
     //todo Obtencion de Campeones del servidor
+    vm.apiVersion ='';
     vm.champions = [];
 
     championsFactory.get().success(function(data) {
         var parsed = data.data;
+        vm.apiVersion = data.version;
         for(var champ in parsed){
             vm.champions.push(parsed[champ]);
         }
@@ -33,6 +35,7 @@ function championsController($location, championsFactory, championService){
                 var parsed = data;
                 vm.detailChampData=parsed;
                 localStorage.setItem('champDetail',JSON.stringify(parsed));
+                localStorage.setItem('apiVersion',vm.apiVersion);
                 $location.path('/champion-detail/'+vm.detailChampData.name);
             });
     };

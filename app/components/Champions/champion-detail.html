@@ -6,9 +6,13 @@
     <div class="section-wrapper-top">
     </div>
     <div class="section-wrapper-content">
+        <div class="champion-tittle">
+            <h1>{{::cc.detailChampData.name}}</h1>
+            <h4>{{::cc.getAllTags()}}</h4>
+        </div>
         <div class="slider-wrapper">
             <div class="skins-tittle">
-
+                <h1>Aspectos</h1>
             </div>
             <div  slider="{slidesToShow:1, draggable:true}" class="slider">
                 <div class="loading-champ-img" ng-repeat="skin in cc.detailChampData.skins">
@@ -26,6 +30,7 @@
 
             <div class="atts-wrapper">
                 <div class="atts-tittle">
+                    <h1>Atributos</h1>
                 </div>
                 <table class="atts-table">
                     <tr>
@@ -57,6 +62,7 @@
             </div>
             <div class="stats-wrapper">
                 <div class="stats-tittle">
+                    <h1>Estadísticas</h1>
                 </div>
                 <div id="stats-graph" >
 
@@ -67,11 +73,12 @@
         <div class="clear"></div>
         <div class="abilityInfo-wrapper">
             <div class="ability-tittle">
+                <h1>Habilidades</h1>
             </div>
                 <table class="ability-table">
                     <tr>
                         <th rowspan="2" class="abilityIcon" id="abilityIcon">
-                                <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.10.1/img/passive/{{::cc.detailChampData.passive.image.full}} ">
+                                <img  ng-src="http://ddragon.leagueoflegends.com/cdn/{{::cc.apiVersion}}/img/passive/{{::cc.detailChampData.passive.image.full}} ">
 
                         </th>
                         <th id="txtAbility-tittle"> {{::cc.detailChampData.passive.name + " (Pasivo)"}}</th>
@@ -87,7 +94,7 @@
                 <table ng-repeat="spell in cc.detailChampData.spells" class="ability-table">
                     <tr>
                         <th rowspan="2" class="abilityIcon" id="abilityIconSpell">
-                            <img  ng-src="http://ddragon.leagueoflegends.com/cdn/6.10.1/img/spell/{{spell.image.full}} ">
+                            <img  ng-src="http://ddragon.leagueoflegends.com/cdn/{{cc.apiVersion}}/img/spell/{{spell.image.full}} ">
 
                         </th>
                         <th id="txtAbility-tittleSpell"> {{cc.renameSpells(spell.name) }}</th>
@@ -95,7 +102,7 @@
                     <tr style="border-bottom: solid 1px dimgray">
                         <td>
                             <div class="txtAbility">
-                                <p ng-bind-html="cc.trustHtml(spell.tooltip)"></p>
+                                <p ng-bind-html="cc.trustHtml(cc.replaceSpellValues(spell))"></p>
                             </div>
                         </td>
                     </tr>
@@ -113,15 +120,6 @@
 </div>
 
 
-<div id="champDetailsGeneral">
-
-
-
-
-
-
-
-</div>
 
 
 

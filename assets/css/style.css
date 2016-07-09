@@ -11,6 +11,12 @@ html, body
     background-color: #313131;
     margin:10px auto;
     color: #000;
+    font-family: Amaranth;
+}
+
+*{
+    font-family: Amaranth;
+    font-style: italic;
 }
 
 p{
@@ -189,8 +195,10 @@ p{
     width: 250px;
     height: 30px;
     /* margin : <top> <right> <bot> <left>*/
-    margin: 12px 0 0 655px;
+    margin: 12px 0 0 600px;
     background: rgba(140, 136, 136, 0.3);
+    font-family: Arial;
+    font-size: medium;
 }
 
 .champ-wrapper{
@@ -202,7 +210,9 @@ p{
     float: left;
     display: block;
     width:100%;
+    min-height: 280px;
     background: url(../img/content-background.png)  repeat-y;
+    text-shadow:3px 3px 5px #1c1c1c;
 }
 
 .clear{
@@ -305,41 +315,82 @@ p{
     float: left;
 }
 
+.champion-tittle{
+    width:100%;
+    height: 120px;
+    top:-40px;
+    /*left:110px;
+    left:40px;
+    /*background: url(../img/Aspectos.png) no-repeat;*/
+    position: relative;
+    font-size: 25px;
+    color:#d6751e;
+    text-align: center;
+}
+
+.champion-tittle h4{
+    top: -35px;
+    position: relative;
+}
 .skins-tittle{
     width:100%;
     height: 120px;
-    left:110px;
+    /*left:110px;*/
+    left:40px;
     top:-30px;
-    background: url(../img/Aspectos.png) no-repeat;
+    /*background: url(../img/Aspectos.png) no-repeat;*/
     position: relative;
+    color:#d6751e;
+    font-family: Amaranth;
+    font-style: italic;
+    text-shadow:3px 3px 5px #1c1c1c;
+    text-align: center;
 }
 
 .atts-tittle{
     width:100%;
     height: 120px;
-    left:80px;
+    /*left:80px;*/
     top:-30px;
-    background: url(../img/Atributos.png) no-repeat;
+    /*background: url(../img/Atributos.png) no-repeat;*/
     position: relative;
+    color:#d6751e;
+    font-family: Amaranth;
+    font-style: italic;
+    text-shadow:3px 3px 5px #1c1c1c;
+    text-align: center;
 }
 
 .stats-tittle{
     width:100%;
     height: 120px;
-    left:80px;
+    /*left:80px;
     top:-30px;
-    background: url(../img/Estadisticas.png) no-repeat;
+    /*background: url(../img/Estadisticas.png) no-repeat;*/
+    top:10px;
     position: relative;
+    color:#d6751e;
+    font-family: Amaranth;
+    font-style: italic;
+    text-shadow:3px 3px 5px #1c1c1c;
+    text-align: center;
 }
 
 #stats-graph{
     top: -60px;
     position: relative;
 
+
+}
+
+.stats-wrapper{
+    position: relative;
+    top:-40px;
 }
 
 .atts-wrapper{
     position: relative;
+
 }
 
 .atts-table{
@@ -348,6 +399,10 @@ p{
     text-align: center;
     position: relative;
     top:-50px;
+}
+
+.atts-table{
+    font-size: 16px;
 }
 
 .atts-table th{
@@ -361,11 +416,17 @@ p{
 
 .ability-tittle{
     width:100%;
-    height: 180px;
-    left:280px;
+    height: 120px;
+    /*left:280px;*/
     top:30px;
-    background: url(../img/Habilidades.png) no-repeat;
+    /*background: url(../img/Habilidades.png) no-repeat;*/
     position: relative;
+    color:#d6751e;
+    font-family: Amaranth;
+    font-style: italic;
+    text-shadow:3px 3px 5px #1c1c1c;
+    text-align: center;
+
 }
 
 .abilityInfo-wrapper{
@@ -382,6 +443,7 @@ p{
 
 .ability-table p{
     color: ghostwhite;
+    font-size: 14px;
 }
 
 .ability-table th{
@@ -451,3 +513,110 @@ p{
 }
 
 /* Champion and Champion Details Setup end*/
+
+/* Match History start*/
+
+.tittle{
+    width:100%;
+    height: 120px;
+    /*left:110px;
+    left:40px;
+    /*background: url(../img/Aspectos.png) no-repeat;*/
+    position: relative;
+    font-size: 25px;
+    color:#d6751e;
+    text-align: center;
+}
+
+.match-history-search-bar{
+   text-align: center;
+}
+
+.player-Search-Bar{
+    width: 350px;
+    height: 40px;
+    /* margin : <top> <right> <bot> <left>*/
+    background: rgba(140, 136, 136, 0.3);
+    color:#d6751e;
+    font-family: Arial;
+    font-size: medium;
+}
+
+.select-standard{
+    text-align: center;
+    width: 100px;
+    height: 37px;
+    vertical-align: baseline;
+    font-size: medium;
+    -moz-box-shadow:inset 3px 9px 8px -5px #b51a06;
+    -webkit-box-shadow:inset 3px 9px 8px -5px #b51a06;
+    box-shadow:inset 3px 9px 8px -5px #b51a06;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bd1c00), color-stop(1, #611006));
+    background:-moz-linear-gradient(top, #bd1c00 5%, #611006 100%);
+    background:-webkit-linear-gradient(top, #bd1c00 5%, #611006 100%);
+    background:-o-linear-gradient(top, #bd1c00 5%, #611006 100%);
+    background:-ms-linear-gradient(top, #bd1c00 5%, #611006 100%);
+    background:linear-gradient(to bottom, #bd1c00 5%, #611006 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bd1c00', endColorstr='#611006',GradientType=0);
+    background-color:#611202;
+    border:1px solid #858585;
+    color:#ffffff;
+    text-shadow:0px 3px 5px #1a0604;
+}
+
+.select-standard:hover{
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #611006), color-stop(1, #bd1c00));
+    background:-moz-linear-gradient(top, #611006 5%, #bd1c00 100%);
+    background:-webkit-linear-gradient(top, #611006 5%, #bd1c00 100%);
+    background:-o-linear-gradient(top, #611006 5%, #bd1c00 100%);
+    background:-ms-linear-gradient(top, #611006 5%, #bd1c00 100%);
+    background:linear-gradient(to bottom, #611006 5%, #bd1c00 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#611006', endColorstr='#bd1c00',GradientType=0);
+    background-color:#611006;
+
+}
+
+.button-standard{
+    -moz-box-shadow:inset 3px 9px 8px -5px #b51a06;
+    -webkit-box-shadow:inset 3px 9px 8px -5px #b51a06;
+    box-shadow:inset 3px 9px 8px -5px #b51a06;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bd1c00), color-stop(1, #611006));
+    background:-moz-linear-gradient(top, #bd1c00 5%, #611006 100%);
+    background:-webkit-linear-gradient(top, #bd1c00 5%, #611006 100%);
+    background:-o-linear-gradient(top, #bd1c00 5%, #611006 100%);
+    background:-ms-linear-gradient(top, #bd1c00 5%, #611006 100%);
+    background:linear-gradient(to bottom, #bd1c00 5%, #611006 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bd1c00', endColorstr='#611006',GradientType=0);
+    background-color:#bd1c00;
+    border:1px solid #858585;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:9px 29px;
+    text-decoration:none;
+    text-shadow:0px 3px 5px #1a0604;
+}
+
+.button-standard:hover{
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #611006), color-stop(1, #bd1c00));
+    background:-moz-linear-gradient(top, #611006 5%, #bd1c00 100%);
+    background:-webkit-linear-gradient(top, #611006 5%, #bd1c00 100%);
+    background:-o-linear-gradient(top, #611006 5%, #bd1c00 100%);
+    background:-ms-linear-gradient(top, #611006 5%, #bd1c00 100%);
+    background:linear-gradient(to bottom, #611006 5%, #bd1c00 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#611006', endColorstr='#bd1c00',GradientType=0);
+    background-color:#611006;
+}
+
+.button-standard:active{
+    position:relative;
+    top:1px;
+}
+
+
+/* Match History end*/
+
+

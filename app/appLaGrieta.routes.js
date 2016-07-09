@@ -12,6 +12,14 @@ angular.module("appLaGrieta",['ngRoute'])
                 templateUrl: '../Champions/champions.html',
 
             })
+            .when('MatchHistory/home',{
+                templateUrl: '../MatchHistory/match-history.html',
+
+            })
+            .when('MatchHistory/match-history',{
+                templateUrl: '../MatchHistory/match-history.html',
+
+            })
             .otherwise({
                 redirectTo: '/home'
             });

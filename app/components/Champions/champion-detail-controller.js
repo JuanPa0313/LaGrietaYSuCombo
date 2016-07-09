@@ -10,17 +10,33 @@ function championDetailController($sce, championService) {
     var Service = championService;
     vm. renamedSpells = false;
     vm.detailChampData = JSON.parse(localStorage.getItem('champDetail'));
+    vm.apiVersion = localStorage.getItem('apiVersion');
 
+    //Todo Funcion para concatenar todos los tags de los campeones
+    vm.getAllTags=function(){
+        var tags = "( ";
+        for(var i =0;i<vm.detailChampData.tags.length;i++){
+            if(i == vm.detailChampData.tags.length-1){
+                tags+= vm.detailChampData.tags[i]+" )";
+            }else{
+                tags+= vm.detailChampData.tags[i] +" - ";
+            }
+        }
+        return tags;
+    }
+    //Todo funcion para mostrar el texto traido desde el api
     vm.trustHtml = function (value){
         return $sce.trustAsHtml(value);
     };
 
+    //Todo Funcion para calcular la velocidad de ataque del campeon
     vm.calculateAttackSpeed= function(attackDelay, attackGrowth){
         if(attackGrowth == undefined)
             attackGrowth=0;
         return (0.625/1+(attackDelay)).toFixed(3) + " ("+attackGrowth+"% x Nvl)";
     }
 
+    //Todo Funcion para renombrar el skin normal de los campeones a Estandar
     vm.renameSkin=function(skinName){
         if(skinName === "default"){
             skinName="Estándar"
@@ -118,14 +134,50 @@ function championDetailController($sce, championService) {
 
     };
 
-    vm.replaceSpellValues=function(text, spell){
-        /*EffectBurn replacement*/
-
-
-        var newText = replace("")
+    vm.getKeyValueFromArray=function(arr, val){
+        for(var i=0;i<arr.length;i++){
+            if(arr[i].key == val){
+                return arr[i].coeff[0]*100+"%";
+            }
+        }
     };
 
+    vm.replaceSpellValues=function(spell) {
+        /*EffectBurn replacement*/
+        var exp = /{{/g;//Expresion para las llaves que abren
+        var exp2 = /}}/g;//Expresion para las llaves que cierran
+        var exp3 = /\s\w\d\s/g;//Expression para los valores que se encuentran dentro de las llaves para luego cambiarlos
+        var expColor =/class="color/g;//Expression del color para cambiarlo por style
+        spell.tooltip = spell.tooltip.replace(exp, "(");
+        spell.tooltip = spell.tooltip.replace(exp2, ")");
+        spell.tooltip=  spell.tooltip.replace(expColor, "style=\"color:#");
+        var result = exp3.exec(spell.tooltip);
 
+        while (result != null) {
+            var val = spell.tooltip.substring(result.index+1 , result.index + 2);
+            var position = parseInt(spell.tooltip.substring(result.index + 2, result.index + 3));
+            switch (val) {
+                case "e":
+                    spell.tooltip = spell.tooltip.replace(result[0],"<span style=\"color:#2289b9\">"+ spell.effectBurn[position]+"</span>");
+                    break;
+                case "a":
+                    if(spell.vars != undefined)
+                        spell.tooltip = spell.tooltip.replace(result[0], vm.getKeyValueFromArray(spell.vars, result[0].trim()));
+                    else
+                        spell.tooltip = spell.tooltip.replace(result[0], " ");
+                    break;
+                case "f":
+                    if(spell.vars != undefined)
+                        spell.tooltip = spell.tooltip.replace(result[0], vm.getKeyValueFromArray(spell.vars, result[0].trim() ));
+                    else
+                        spell.tooltip = spell.tooltip.replace(result[0], " ");
+                    break;
+            }
+            result = exp3.exec(spell.tooltip);
+        }
+        return spell.tooltip;
+
+    };
 
 
 
